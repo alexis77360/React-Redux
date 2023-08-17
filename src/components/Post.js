@@ -1,11 +1,19 @@
 import React, { useState } from "react";
 import Like from "./Like";
+import { useSelector } from "react-redux";
+import { isEmpty } from "./Utils";
 
 const Post = ({ post }) => {
   const [editToggle, setEditToggle] = useState(false);
+  const user = useSelector((state) => state.userReducer);
 
   return (
     <div className="post">
+
+      {/*//! On verifie l'utilisateur est bien l'auteur du post pour afficher les boutons edit et delete */}
+      {!isEmpty(user) && user.pseudo === post.author && ( 
+
+
       <div className="edit-delete">
         <img
           src="./icons/edit.svg"
@@ -17,6 +25,7 @@ const Post = ({ post }) => {
           alt="delete"
         />
       </div>
+      )}
 
       <h2>{post.title}</h2>
       <img

@@ -1,13 +1,22 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { isEmpty } from "./Utils";
 
 const User = () => {
+
+  //! Pensez a verifier que la variable user n'est pas vide ou null avant de l'utiliser isEmpty()
+  const user = useSelector((state) => state.userReducer);
+
+
   return (
     <div className="user-container">
       <div className="user">
-        <h3>pseudo</h3>
+        <h3>{!isEmpty(user) && user.pseudo}</h3>
         <img src="./img/bill-gates.png" alt="bill gates" />
-        <p>Age : 30 ans</p>
-        <p>Like(s) : 0</p>
+        <p>Age : {!isEmpty(user) && user.age} ans</p>
+
+        <p>Like {!isEmpty(user) && user.like > 1 ? "s" : " "} : {" "}
+        {!isEmpty(user) && user.likes}</p>
       </div>
     </div>
   );
