@@ -3,9 +3,9 @@
     {
       "title": "Lorem ipsum dolor sit amet",
       "author": "Patrice",
+      "id": "1",
       "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptates non, odit, sequi sit pariatur iusto modi magni dolorem, cupiditate corrupti! Recusandae quaerat vitae fugiat mollitia blanditiis, temporibus eum! Ipsum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptates non, odit, sequi sit pariatur iusto modi magni dolorem, cupiditate corrupti! Recusandae quaerat vitae fugiat mollitia blanditiis, temporibus eum! Ipsum?",
-      "likes": 27,
-      "id": "1"
+      "likes": 40
     },
     {
       "title": "Lorem ipsum dolor sit amet dolor sit amet",
@@ -25,9 +25,9 @@
   "user": [
     {
       "pseudo": "user42",
-      "likes": 0,
-      "age": 30,
-      "id": 1
+      "id": 1,
+      "likes": 1,
+      "age": 30
     }
   ]
 }
